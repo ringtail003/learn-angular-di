@@ -1,14 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SomeComponent } from './some.component';
+import { GreetService } from 'src/app/services/greet.service';
 
 describe('SomeComponent', () => {
   let component: SomeComponent;
   let fixture: ComponentFixture<SomeComponent>;
+  let spy: jasmine.Spy = jasmine.createSpy();
 
   beforeEach(async(() => {
+    spy.and.returnValue('hello');
+
     TestBed.configureTestingModule({
-      declarations: [ SomeComponent ]
+      declarations: [ SomeComponent ],
+      providers: [
+        { provide: GreetService, useValue: { greet: spy } }
+      ],
     })
     .compileComponents();
   }));
@@ -21,5 +28,9 @@ describe('SomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('say hello', () => {
+    expect(component.message).toBe('hello');
   });
 });
