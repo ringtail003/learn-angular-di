@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GreetService } from 'src/app/services/greet.service';
 
 @Component({
   selector: 'some',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./some.component.scss']
 })
 export class SomeComponent implements OnInit {
+  message: string = null;
 
-  constructor() { }
+  constructor(
+    private greetService: GreetService,
+  ) { }
 
   ngOnInit() {
+    this.message = this.greetService.greet('Angular');
   }
 
 }
