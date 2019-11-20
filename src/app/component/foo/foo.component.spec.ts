@@ -28,4 +28,8 @@ describe('FooComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('logger is null', () => {
+    expect(component.logger).toBeNull();
+  });
 });

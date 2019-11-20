@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Optional } from '@angular/core';
 import { LoggerService } from 'src/app/services/logger.service';
+import { UnknownLogger } from 'src/app/services/unknown-logger';
 
 @Component({
   selector: 'foo',
@@ -10,10 +11,14 @@ export class FooComponent implements OnInit {
   message: string = null;
 
   constructor(
-    private logger: LoggerService,
+    @Optional() public logger: UnknownLogger,
   ) { }
 
   ngOnInit() {
+    if (!this.logger) {
+      return;
+    };
+
     this.message = this.logger.log();
   }
 
