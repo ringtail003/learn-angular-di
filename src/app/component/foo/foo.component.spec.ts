@@ -28,4 +28,8 @@ describe('FooComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('logger is own logger', () => {
+    expect(component.logger.log()).toBe('foo component logger');
+  });
 });
