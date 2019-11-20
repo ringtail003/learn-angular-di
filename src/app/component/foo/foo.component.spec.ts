@@ -28,4 +28,8 @@ describe('FooComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('ignore own logger', () => {
+    expect(component.logger.log()).toBe('root injector logger');
+  });
 });
