@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SomeComponent } from './some.component';
+import { APP_CONFIG } from 'src/app/tokens/app-config';
 
 describe('SomeComponent', () => {
   let component: SomeComponent;
@@ -8,7 +9,10 @@ describe('SomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SomeComponent ]
+      declarations: [ SomeComponent ],
+      providers: [
+        { provide: APP_CONFIG, useValue: { title: 'my app' } }
+      ],
     })
     .compileComponents();
   }));
@@ -21,5 +25,9 @@ describe('SomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('application title', () => {
+    expect(component.title).toBe('my app');
   });
 });
