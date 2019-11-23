@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+pre {
+  display: inline-block;
+  background: #CCCC6C;
+  padding: 2px;
+  border-radius: 2px;
+
+  &[provide] {
+    background: #5bfa11;
+  }
+}
+
+foo {
+  display: block;
+  border-left: solid 7px #CCCC6C;
+  padding: 0 20px;
+}
+
+bar {
+  display: block;
+  border-left: solid 7px #d1d19e;
+  padding: 0 20px;
+}
+
+baz {
+  display: inline-block;
+  border-left: solid 7px #c9c9bd;
+  padding: 0 20px;
+}
