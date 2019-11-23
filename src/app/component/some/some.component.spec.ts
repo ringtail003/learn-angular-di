@@ -13,10 +13,9 @@ describe('SomeComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [ SomeComponent ],
-      providers: [
-        { provide: GreetService, useValue: { greet: spy } }
-      ],
+      imports: [],
     })
+    .overrideProvider(GreetService, { useValue: { greet: spy } })
     .compileComponents();
   }));
 

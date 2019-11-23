@@ -4,7 +4,10 @@ import { GreetService } from 'src/app/services/greet.service';
 @Component({
   selector: 'some',
   templateUrl: './some.component.html',
-  styleUrls: ['./some.component.scss']
+  styleUrls: ['./some.component.scss'],
+  providers: [
+    { provide: GreetService, useValue: { greet: () => 'by component injector.' } }
+  ],
 })
 export class SomeComponent implements OnInit {
   message: string = null;

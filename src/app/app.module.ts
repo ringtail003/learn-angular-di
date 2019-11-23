@@ -10,7 +10,7 @@ import { SomeComponent } from './component/some/some.component';
     SomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
