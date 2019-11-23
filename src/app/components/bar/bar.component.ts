@@ -14,7 +14,7 @@ export class Isolate extends BarService {
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.scss'],
   providers: [
-    { provide: BarService, useClass: Isolate },
+    { provide: BarService, useValue: new Isolate },
   ],
 })
 export class BarComponent implements OnInit {
