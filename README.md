@@ -1,27 +1,34 @@
-# LearnAngularDi
+<img src="https://img.shields.io/badge/Angular-8.3-blue?style=for-the-badge&logo=angular"> <img src="https://img.shields.io/badge/Node.js-12.13-blue?style=for-the-badge&logo=node.js">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+# Overview
 
-## Development server
+TBL
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Branches
 
-## Code scaffolding
+- [最初のDI](https://github.com/ringtail003/learn-angular-di/tree/01-injectable-service)
+- [インジェクターの指定 `@Injectable`](https://github.com/ringtail003/learn-angular-di/tree/02-injector-injectable)
+- [インジェクターの指定 `@NgModule`](https://github.com/ringtail003/learn-angular-di/tree/02-injector-ngmodule)
+- [インジェクターの指定 `@Component`](https://github.com/ringtail003/learn-angular-di/tree/02-injector-component)
+- [インジェクターの指定 `viewProviders`](https://github.com/ringtail003/learn-angular-di/tree/02-view-provider)
+- [ツリー探索のチューニング `@Optional`](https://github.com/ringtail003/learn-angular-di/tree/03-parameters-host-optional)
+- [ツリー探索のチューニング `@Self`](https://github.com/ringtail003/learn-angular-di/tree/03-parameters-host-self)
+- [ツリー探索のチューニング `@SkipSelf`](https://github.com/ringtail003/learn-angular-di/tree/03-parameters-host-skipself)
+- [ツリー探索のチューニング `@Host`](https://github.com/ringtail003/learn-angular-di/tree/03-parameters-host-host)
+- [カスタムトークン](https://github.com/ringtail003/learn-angular-di/tree/04-custom-token)
+- [参照のチューニング `useClass`](https://github.com/ringtail003/learn-angular-di/tree/05-refs-class)
+- [参照のチューニング `useFactory`](https://github.com/ringtail003/learn-angular-di/tree/05-refs-factory)
+- [参照のチューニング `useValue`](https://github.com/ringtail003/learn-angular-di/tree/05-refs-value)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Get Started
 
-## Build
+```bash
+$ npm ci
+$ npm start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Running unit tests
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+$ npm test
+```
