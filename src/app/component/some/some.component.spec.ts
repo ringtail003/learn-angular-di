@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SomeComponent } from './some.component';
 import { GreetService } from 'src/app/services/greet.service';
+import { SomeModule } from 'src/app/module';
 
 describe('SomeComponent', () => {
   let component: SomeComponent;
@@ -13,6 +14,7 @@ describe('SomeComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [ SomeComponent ],
+      imports: [ SomeModule ],
       providers: [
         { provide: GreetService, useValue: { greet: spy } }
       ],
