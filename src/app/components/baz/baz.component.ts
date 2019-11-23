@@ -13,7 +13,7 @@ export class Isolate extends BazService {
   templateUrl: './baz.component.html',
   styleUrls: ['./baz.component.scss'],
   providers: [
-    { provide: BazService, useClass: Isolate },
+    { provide: BazService, useFactory: () => new Isolate },
   ],
 })
 export class BazComponent implements OnInit {

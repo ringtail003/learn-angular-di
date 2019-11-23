@@ -14,7 +14,7 @@ export class Isolate extends FooService {
   templateUrl: './foo.component.html',
   styleUrls: ['./foo.component.scss'],
   providers: [
-    { provide: FooService, useClass: Isolate },
+    { provide: FooService, useFactory: () => new Isolate },
   ],
 })
 export class FooComponent implements OnInit {
