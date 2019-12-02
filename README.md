@@ -2,7 +2,8 @@
 
 # Overview
 
-TBL
+このリポジトリはQiitaの記事で紹介したサンプルコード置き場です。
+https://qiita.com/ringtail003/items/d4329f7e77ce70ccc2d0
 
 # Branches
 
